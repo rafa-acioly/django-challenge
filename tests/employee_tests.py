@@ -32,7 +32,7 @@ def test_mount_viewset(temporary_employee):
 def test_blank_email(client, temporary_employee):
     from api.models import Employee
 
-    response = client.post('/employee/{}'.format(temporary_employee.id),
+    response = client.post('/employee/',
                             json.dumps({"name": "Funcionado sem email", "department": "TI"}),
                             HTTP_X_METHOD_OVERRIDE='POST',
                             content_type='application/json')
@@ -43,7 +43,7 @@ def test_blank_email(client, temporary_employee):
 def test_unique_email(client, temporary_employee):
     from api.models import Employee
 
-    response = client.post('/employee/{}'.format(temporary_employee.id),
+    response = client.post('/employee/',
                             json.dumps({"name": "Funcionado email repetido", "department": "TI", "email": "meu_email@gmail.com"}),
                             HTTP_X_METHOD_OVERRIDE='POST',
                             content_type='application/json')
