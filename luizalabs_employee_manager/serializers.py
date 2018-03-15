@@ -3,7 +3,8 @@ from api.models import Employee
 
 
 class EmployeeSerialize(serializers.HyperlinkedModelSerializer):
+    read_only_fields = ('created_at')
 
     class Meta:
         model = Employee
-        fields = ('__all__')
+        fields = ('name', 'email', 'department')
