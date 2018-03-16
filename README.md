@@ -11,9 +11,10 @@
 ## Init the configuration
 Insite the `django-challenge` folder run on your terminal:
 
-1. `pip install -r requirements.txt`
-2. `python manage.py makemigrations api`
-3. `python manage.py migrate`
+1. `pip install pytest-django` // if not installed yet.
+2. `pip install -r requirements.txt`
+3. `python manage.py makemigrations api`
+4. `python manage.py migrate`
 
 ## Create User Admin
 
