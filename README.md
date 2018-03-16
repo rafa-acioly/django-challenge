@@ -11,21 +11,21 @@
 ## Init the configuration
 Insite the `django-challenge` folder run on your terminal:
 
-1. `pip install -r requirements.txt`
-2. `python manager.py makemigrations api`
-3. `python manager.py makemigrations`
-4. `python manager.py migrate`
+1. `pip install pytest-django` // if not installed yet.
+2. `pip install -r requirements.txt`
+3. `python manage.py makemigrations api`
+4. `python manage.py migrate`
 
 ## Create User Admin
 
 Inside the challenge folder run the follow command:
 
 ```sh
-python manager.py addsuperuser
+python manage.py createsuperuser
 ```
 
 this command will ask for a username, email and password that you will use to login into the admin area.
 
 ## Run Project
 
-`python manager.py runserver`
+`python manage.py runserver`
